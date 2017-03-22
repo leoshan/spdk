@@ -38,8 +38,8 @@ To build SPDK, some dependencies must be installed.
 
 Update kernel and header file (Linux kernel headers or sources required to build kernel modules)
    
-   sudo yum install -y kernel kernel-dev git
-   sudo reboot
+    sudo yum install -y kernel kernel-dev git
+    sudo reboot
 
 Fedora/CentOS:
 

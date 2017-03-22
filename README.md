@@ -36,11 +36,16 @@ Prerequisites
 
 To build SPDK, some dependencies must be installed.
 
+Update kernel and header file (Linux kernel headers or sources required to build kernel modules)
+   
+   sudo yum install -y kernel kernel-dev git
+   sudo reboot
+
 Fedora/CentOS:
 
-    sudo dnf install -y gcc gcc-c++ CUnit-devel libaio-devel openssl-devel
+    sudo yum install -y gcc gcc-c++ CUnit-devel libaio-devel openssl-devel
     # Additional dependencies for NVMe over Fabrics:
-    sudo dnf install -y libibverbs-devel librdmacm-devel
+    sudo yum install -y libibverbs-devel librdmacm-devel
 
 Ubuntu/Debian:
 
@@ -54,6 +59,7 @@ FreeBSD:
 
 Additionally, [DPDK](http://dpdk.org/doc/quick-start) is required.
 
+    0) git clone https://github.com/spdk/spdk
     1) cd /path/to/spdk
     2) wget http://fast.dpdk.org/rel/dpdk-17.02.tar.xz
     3) tar xf dpdk-17.02.tar.xz
@@ -104,6 +110,8 @@ FreeBSD:
 
 Hugepages and Device Binding
 ============================
+
+http://dpdk.org/doc/guides/linux_gsg/sys_reqs.html
 
 Before running an SPDK application, some hugepages must be allocated and
 any NVMe and I/OAT devices must be unbound from the native kernel drivers.

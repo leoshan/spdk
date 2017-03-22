@@ -69,7 +69,9 @@ Install SPDK fio PLUGIN (https://github.com/spdk/spdk/tree/master/examples/nvme/
     1）git clone http://github.com/axboe/fio
     2）cd fio && git checkout fio-2.8
     3）./configure && make
+       编译安装对应版本的FIO, sudo make install
     4) 编辑SPDK目录下的CONFIG 文件，设置 CONFIG_FIO_PLUGIN 为y，FIO_SOURCE_DIR 为下载的fio的源码路径
+       CONFIG_FIO_PLUGIN=y     FIO_SOURCE_DIR=/home/ec2-user/spdk/fio
     5) 修改DPDK config file (如：config/defconfig_x86_64-native-linuxapp-gcc) ，在其中增加 EXTRA_CFLAGS=-fPIC
     
 Linux:

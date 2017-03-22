@@ -64,6 +64,14 @@ Additionally, [DPDK](http://dpdk.org/doc/quick-start) is required.
     2) wget http://fast.dpdk.org/rel/dpdk-17.02.tar.xz
     3) tar xf dpdk-17.02.tar.xz
 
+Install SPDK fio PLUGIN (https://github.com/spdk/spdk/tree/master/examples/nvme/fio_plugin)
+
+    1）git clone http://github.com/axboe/fio
+    2）cd fio && git checkout fio-2.8
+    3）./configure && make
+    4) 编辑SPDK目录下的CONFIG 文件，设置 CONFIG_FIO_PLUGIN 为y，FIO_SOURCE_DIR 为下载的fio的源码路径
+    5) 修改DPDK config file (如：config/defconfig_x86_64-native-linuxapp-gcc) ，在其中增加 EXTRA_CFLAGS=-fPIC
+    
 Linux:
 
     4) (cd dpdk-17.02 && make install T=x86_64-native-linuxapp-gcc DESTDIR=.)

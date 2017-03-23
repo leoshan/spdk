@@ -139,3 +139,10 @@ with no arguments to see the help output. You'll likely need to run the examples
 as a privileged user (root) unless you've done additional configuration
 to grant your user permission to allocate huge pages and map devices through
 vfio.
+
+Test
+========
+sudo ./identify
+sudo /usr/local/bin/fio example.fio
+
+

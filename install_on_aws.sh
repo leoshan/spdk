@@ -50,3 +50,13 @@ sudo scripts/setup.sh reset
 lsblk
 cat /proc/meminfo | grep -i huge
 mount | grep -i huge
+
+sudo /usr/local/bin/fio latency-4k-rr-nvme.fio >> a.txt
+sudo /usr/local/bin/fio latency-4k-rw-nvme.fio >> a.txt
+sudo /usr/local/bin/fio bw-1m-rr-nvme.fio >> a.txt
+sudo /usr/local/bin/fio bw-1m-rw-nvme.fio >> a.txt
+sudo /usr/local/bin/fio iops-4k-rr-nvme.fio >> a.txt
+sudo /usr/local/bin/fio iops-4k-rw-nvme.fio >> a.txt
+
+
+

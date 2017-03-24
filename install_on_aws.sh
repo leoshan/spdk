@@ -58,5 +58,10 @@ sudo /usr/local/bin/fio bw-1m-rw-nvme.fio >> a.txt
 sudo /usr/local/bin/fio iops-4k-rr-nvme.fio >> a.txt
 sudo /usr/local/bin/fio iops-4k-rw-nvme.fio >> a.txt
 
-
+sudo /usr/local/bin/fio -filename=0000.00.1e.0/1 -iodepth=1 -rw=randread -bs=4k -numjobs=1 -size=20G -runtime=60 -ioengine=/home/ec2-user/spdk/examples/nvme/fio_plugin/fio_plugin -thread=1 -group_reporting=1 -direct=1 -verify=0 -time_based=1 -ramp_time=0 >> a.txt
+sudo /usr/local/bin/fio -filename=0000.00.1e.0/1 -iodepth=1 -rw=randwrite -bs=4k -numjobs=1 -size=20G -runtime=60 -ioengine=/home/ec2-user/spdk/examples/nvme/fio_plugin/fio_plugin -thread=1 -group_reporting=1 -direct=1 -verify=0 -time_based=1 -ramp_time=0 >> a.txt
+sudo /usr/local/bin/fio -filename=0000.00.1e.0/1 -iodepth=128 -rw=randread -bs=4k -numjobs=1 -size=20G -runtime=60 -ioengine=/home/ec2-user/spdk/examples/nvme/fio_plugin/fio_plugin -thread=1 -group_reporting=1 -direct=1 -verify=0 -time_based=1 -ramp_time=0 >> a.txt
+sudo /usr/local/bin/fio -filename=0000.00.1e.0/1 -iodepth=128 -rw=randwrite -bs=4k -numjobs=1 -size=20G -runtime=60 -ioengine=/home/ec2-user/spdk/examples/nvme/fio_plugin/fio_plugin -thread=1 -group_reporting=1 -direct=1 -verify=0 -time_based=1 -ramp_time=0 >> a.txt
+sudo /usr/local/bin/fio -filename=0000.00.1e.0/1 -iodepth=128 -rw=randread -bs=1m -numjobs=1 -size=20G -runtime=60 -ioengine=/home/ec2-user/spdk/examples/nvme/fio_plugin/fio_plugin -thread=1 -group_reporting=1 -direct=1 -verify=0 -time_based=1 -ramp_time=0 >> a.txt
+sudo /usr/local/bin/fio -filename=0000.00.1e.0/1 -iodepth=128 -rw=randwrite -bs=1m -numjobs=1 -size=20G -runtime=60 -ioengine=/home/ec2-user/spdk/examples/nvme/fio_plugin/fio_plugin -thread=1 -group_reporting=1 -direct=1 -verify=0 -time_based=1 -ramp_time=0 >> a.txt
 
